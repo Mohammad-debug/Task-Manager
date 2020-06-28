@@ -19,11 +19,8 @@ const upload =multer({
            return cb(new Error('File is not Word Documnet'))
        }
 
-        // To accept the file pass `true`, like so:
         cb(null, true)
 
-        // You can always pass an error if something goes wrong:
-       // cb(new Error('I don\'t have a clue!'))
     }
 })
 const errorMiddlewre=(req,res,next)=>{
@@ -48,9 +45,6 @@ app.use(routerTask)
 app.listen(port,(req,response)=>{
     console.log("Server is up and running on port "+port) 
 })
-
-
-
 
 const Task =require('./models/task')//Task table or model
 const User = require('./models/user')//Task table or model
